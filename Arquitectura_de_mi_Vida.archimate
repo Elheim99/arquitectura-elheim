@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archimate:model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:archimate="http://www.archimatetool.com/archimate" name="Arquitectura de mi Vida" id="id-ce64e023cbc54b499f0d860caba0dde1" version="5.0.0">
+  <folder name="Strategy" id="id-25a9f58a6c9b477ba5348f491a0d59c6" type="strategy"/>
+  <folder name="Business" id="id-a7b87e1b4e794edd837242416db8a4fb" type="business">
+    <element xsi:type="archimate:BusinessRole" id="id-role-profesional-actual" name="Rol profesional actual"/>
+    <element xsi:type="archimate:BusinessRole" id="id-role-estudiante-posgrado" name="Estudiante de posgrado"/>
+  </folder>
+  <folder name="Application" id="id-36d6601dd82c44dab0672ed2bccb74d4" type="application"/>
+  <folder name="Technology &amp; Physical" id="id-4d2823de3c0f4811ae4ec310788a0812" type="technology"/>
+  <folder name="Motivation" id="id-24c3bf941dae4a8abe1c35802be3d5e0" type="motivation">
+    <element xsi:type="archimate:Stakeholder" id="id-sh-elheim" name="Elheim"/>
+    <element xsi:type="archimate:Goal" id="id-goal-terminar-especializacion" name="Terminar la especialización"/>
+    <element xsi:type="archimate:Goal" id="id-goal-crecimiento-profesional" name="Crecimiento profesional"/>
+    <element xsi:type="archimate:Requirement" id="id-req-aprobar-materias-pendientes" name="Aprobar materias pendientes"/>
+    <element xsi:type="archimate:Requirement" id="id-req-aprobar-proyecto-grado" name="Aprobar proyecto de grado"/>
+    <element xsi:type="archimate:Requirement" id="id-req-conseguir-nuevo-rol-posicion" name="Conseguir un nuevo rol o posición"/>
+  </folder>
+  <folder name="Implementation &amp; Migration" id="id-776192d000c743048050f464a1a31d77" type="implementation_migration"/>
+  <folder name="Other" id="id-fcf20728665a4f16b867215da8bef251" type="other">
+    <element xsi:type="archimate:Grouping" id="id-grp-profesional-laboral" name="Profesional / Laboral"/>
+    <element xsi:type="archimate:Grouping" id="id-grp-academico-formacion" name="Académico / Formación"/>
+  </folder>
+  <folder name="Relations" id="id-f0f51022b1d74d3da48e6fe14709d4e2" type="relations">
+    <element xsi:type="archimate:AssignmentRelationship" id="id-rel-assign-elheim-profesional" source="id-sh-elheim" target="id-role-profesional-actual"/>
+    <element xsi:type="archimate:AssignmentRelationship" id="id-rel-assign-elheim-posgrado" source="id-sh-elheim" target="id-role-estudiante-posgrado"/>
+    <element xsi:type="archimate:InfluenceRelationship" id="id-rel-infl-elheim-especializacion" source="id-sh-elheim" target="id-goal-terminar-especializacion"/>
+    <element xsi:type="archimate:InfluenceRelationship" id="id-rel-infl-elheim-crecimiento" source="id-sh-elheim" target="id-goal-crecimiento-profesional"/>
+    <element xsi:type="archimate:RealizationRelationship" id="id-rel-realiz-materias-especializacion" source="id-req-aprobar-materias-pendientes" target="id-goal-terminar-especializacion"/>
+    <element xsi:type="archimate:RealizationRelationship" id="id-rel-realiz-proyecto-especializacion" source="id-req-aprobar-proyecto-grado" target="id-goal-terminar-especializacion"/>
+    <element xsi:type="archimate:RealizationRelationship" id="id-rel-realiz-rol-crecimiento" source="id-req-conseguir-nuevo-rol-posicion" target="id-goal-crecimiento-profesional"/>
+  </folder>
+  <folder name="Views" id="id-b13d1a4eac4c45f7b9e0a29f6c8af219" type="diagrams">
+    <element xsi:type="archimate:ArchimateDiagramModel" id="id-view-general" name="General" connectionRouterType="2">
+      <child xsi:type="archimate:DiagramObject" id="id-v1-dobj-elheim" archimateElement="id-sh-elheim">
+        <bounds x="60" y="140" width="160" height="70"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-v1-conn-assign-prof" source="id-v1-dobj-elheim" target="id-v1-dobj-role-prof" archimateRelationship="id-rel-assign-elheim-profesional"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-v1-conn-assign-posg" source="id-v1-dobj-elheim" target="id-v1-dobj-role-posg" archimateRelationship="id-rel-assign-elheim-posgrado"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-v1-dobj-grp-prof" archimateElement="id-grp-profesional-laboral">
+        <bounds x="320" y="60" width="300" height="130"/>
+        <child xsi:type="archimate:DiagramObject" id="id-v1-dobj-role-prof" targetConnections="id-v1-conn-assign-prof" archimateElement="id-role-profesional-actual">
+          <bounds x="30" y="45" width="240" height="55"/>
+        </child>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-v1-dobj-grp-acad" archimateElement="id-grp-academico-formacion">
+        <bounds x="320" y="220" width="300" height="130"/>
+        <child xsi:type="archimate:DiagramObject" id="id-v1-dobj-role-posg" targetConnections="id-v1-conn-assign-posg" archimateElement="id-role-estudiante-posgrado">
+          <bounds x="30" y="45" width="240" height="55"/>
+        </child>
+      </child>
+    </element>
+    <element xsi:type="archimate:ArchimateDiagramModel" id="id-view-metas" name="Metas" connectionRouterType="2">
+      <child xsi:type="archimate:DiagramObject" id="id-v2-dobj-elheim" archimateElement="id-sh-elheim">
+        <bounds x="80" y="150" width="160" height="70"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-v2-conn-infl-esp" source="id-v2-dobj-elheim" target="id-v2-dobj-goal-esp" archimateRelationship="id-rel-infl-elheim-especializacion"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-v2-conn-infl-crec" source="id-v2-dobj-elheim" target="id-v2-dobj-goal-crec" archimateRelationship="id-rel-infl-elheim-crecimiento"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-v2-dobj-goal-esp" targetConnections="id-v2-conn-infl-esp id-v2-conn-realiz-mat id-v2-conn-realiz-proy" archimateElement="id-goal-terminar-especializacion">
+        <bounds x="360" y="80" width="260" height="60"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-v2-dobj-goal-crec" targetConnections="id-v2-conn-infl-crec id-v2-conn-realiz-rol" archimateElement="id-goal-crecimiento-profesional">
+        <bounds x="360" y="240" width="260" height="60"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-v2-dobj-req-materias" archimateElement="id-req-aprobar-materias-pendientes">
+        <bounds x="700" y="50" width="250" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-v2-conn-realiz-mat" source="id-v2-dobj-req-materias" target="id-v2-dobj-goal-esp" archimateRelationship="id-rel-realiz-materias-especializacion"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-v2-dobj-req-proyecto" archimateElement="id-req-aprobar-proyecto-grado">
+        <bounds x="700" y="120" width="250" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-v2-conn-realiz-proy" source="id-v2-dobj-req-proyecto" target="id-v2-dobj-goal-esp" archimateRelationship="id-rel-realiz-proyecto-especializacion"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-v2-dobj-req-rol" archimateElement="id-req-conseguir-nuevo-rol-posicion">
+        <bounds x="700" y="242" width="250" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-v2-conn-realiz-rol" source="id-v2-dobj-req-rol" target="id-v2-dobj-goal-crec" archimateRelationship="id-rel-realiz-rol-crecimiento"/>
+      </child>
+    </element>
+  </folder>
+</archimate:model>

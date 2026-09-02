@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model xmlns="http://www.opengroup.org/xsd/archimate/3.0/"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.opengroup.org/xsd/archimate/3.0/ http://www.opengroup.org/xsd/archimate/3.1/archimate3_Diagram.xsd"
+       identifier="id-ce64e023cbc54b499f0d860caba0dde1">
+  <name xml:lang="es">Arquitectura de mi Vida</name>
+  <elements>
+    <element identifier="id-drv-desarrollo-profesional" xsi:type="Driver"><name xml:lang="es">Crecimiento profesional</name></element>
+    <element identifier="id-drv-estabilidad-economica" xsi:type="Driver"><name xml:lang="es">Estabilidad económica</name></element>
+    <element identifier="id-val-superacion" xsi:type="Value"><name xml:lang="es">Superación personal</name></element>
+    <element identifier="id-val-independencia" xsi:type="Value"><name xml:lang="es">Independencia</name></element>
+    <element identifier="id-goal-especializacion" xsi:type="Goal"><name xml:lang="es">Finalizar la Especialización en Ingeniería de Software</name></element>
+    <element identifier="id-goal-crecimiento-prof" xsi:type="Goal"><name xml:lang="es">Lograr crecimiento profesional</name></element>
+    <element identifier="id-goal-estabilidad-econ" xsi:type="Goal"><name xml:lang="es">Alcanzar estabilidad económica</name></element>
+    <element identifier="id-goal-licencia" xsi:type="Goal"><name xml:lang="es">Obtener la licencia de conducir</name></element>
+    <element identifier="id-goal-comprar-carro" xsi:type="Goal"><name xml:lang="es">Comprar un carro</name></element>
+    <element identifier="id-goal-comprar-casa" xsi:type="Goal"><name xml:lang="es">Comprar una casa</name></element>
+    <element identifier="id-req-aprobar-asignaturas" xsi:type="Requirement"><name xml:lang="es">Aprobar asignaturas</name></element>
+    <element identifier="id-req-desarrollar-proyecto" xsi:type="Requirement"><name xml:lang="es">Desarrollar proyecto de grado</name></element>
+    <element identifier="id-req-ahorro-casa" xsi:type="Requirement"><name xml:lang="es">Ahorro para cuota inicial</name></element>
+    <element identifier="id-req-credito-casa" xsi:type="Requirement"><name xml:lang="es">Capacidad crediticia y de pago</name></element>
+    <element identifier="id-req-licencia-vigente" xsi:type="Requirement"><name xml:lang="es">Licencia de conducir vigente</name></element>
+    <element identifier="id-req-ahorro-carro" xsi:type="Requirement"><name xml:lang="es">Ahorro para compra de vehículo</name></element>
+    <element identifier="id-cap-competencia-tecnica" xsi:type="Capability"><name xml:lang="es">Competencia técnica y aprendizaje</name></element>
+    <element identifier="id-cap-gestion-tiempo" xsi:type="Capability"><name xml:lang="es">Gestión del tiempo y organización</name></element>
+    <element identifier="id-cap-gestion-financiera" xsi:type="Capability"><name xml:lang="es">Gestión financiera y ahorro</name></element>
+    <element identifier="id-res-herramientas-digitales" xsi:type="Resource"><name xml:lang="es">Herramientas de software y equipo</name></element>
+    <element identifier="id-res-conocimientos" xsi:type="Resource"><name xml:lang="es">Conocimientos previos y experiencia</name></element>
+    <element identifier="id-res-tiempo" xsi:type="Resource"><name xml:lang="es">Tiempo disponible</name></element>
+    <element identifier="id-res-dinero" xsi:type="Resource"><name xml:lang="es">Dinero e ingresos</name></element>
+    <element identifier="id-out-posicionamiento-profesional" xsi:type="Outcome"><name xml:lang="es">Posicionamiento y crecimiento profesional</name></element>
+    <element identifier="id-out-solvencia-financiera" xsi:type="Outcome"><name xml:lang="es">Solvencia y estabilidad financiera</name></element>
+    <element identifier="id-out-patrimonio-vivienda" xsi:type="Outcome"><name xml:lang="es">Patrimonio e independencia habitacional</name></element>
+    <element identifier="id-out-libertad-movilidad" xsi:type="Outcome"><name xml:lang="es">Libertad de movilidad y transporte propio</name></element>
+  </elements>
+  <relationships>
+    <relationship identifier="id-rel-01" source="id-goal-especializacion" target="id-goal-crecimiento-prof" xsi:type="InfluenceRelationship"/>
+    <relationship identifier="id-rel-02" source="id-goal-crecimiento-prof" target="id-goal-estabilidad-econ" xsi:type="InfluenceRelationship"/>
+    <relationship identifier="id-rel-03" source="id-goal-estabilidad-econ" target="id-goal-comprar-casa" xsi:type="InfluenceRelationship"/>
+    <relationship identifier="id-rel-04" source="id-goal-estabilidad-econ" target="id-goal-comprar-carro" xsi:type="InfluenceRelationship"/>
+    <relationship identifier="id-rel-05" source="id-goal-licencia" target="id-goal-comprar-carro" xsi:type="InfluenceRelationship"/>
+    <relationship identifier="id-rel-06" source="id-req-aprobar-asignaturas" target="id-goal-especializacion" xsi:type="RealizationRelationship"/>
+    <relationship identifier="id-rel-07" source="id-req-desarrollar-proyecto" target="id-goal-especializacion" xsi:type="RealizationRelationship"/>
+    <relationship identifier="id-rel-08" source="id-req-licencia-vigente" target="id-goal-licencia" xsi:type="RealizationRelationship"/>
+    <relationship identifier="id-rel-09" source="id-req-ahorro-carro" target="id-goal-comprar-carro" xsi:type="RealizationRelationship"/>
+    <relationship identifier="id-rel-10" source="id-req-ahorro-casa" target="id-goal-comprar-casa" xsi:type="RealizationRelationship"/>
+    <relationship identifier="id-rel-11" source="id-req-credito-casa" target="id-goal-comprar-casa" xsi:type="RealizationRelationship"/>
+    <relationship identifier="id-rel-12" source="id-cap-competencia-tecnica" target="id-req-aprobar-asignaturas" xsi:type="ServingRelationship"/>
+    <relationship identifier="id-rel-13" source="id-cap-competencia-tecnica" target="id-req-desarrollar-proyecto" xsi:type="ServingRelationship"/>
+    <relationship identifier="id-rel-14" source="id-cap-gestion-tiempo" target="id-req-aprobar-asignaturas" xsi:type="ServingRelationship"/>
+    <relationship identifier="id-rel-15" source="id-cap-gestion-tiempo" target="id-req-licencia-vigente" xsi:type="ServingRelationship"/>
+    <relationship identifier="id-rel-16" source="id-cap-gestion-financiera" target="id-req-ahorro-casa" xsi:type="ServingRelationship"/>
+    <relationship identifier="id-rel-17" source="id-cap-gestion-financiera" target="id-req-credito-casa" xsi:type="ServingRelationship"/>
+    <relationship identifier="id-rel-18" source="id-cap-gestion-financiera" target="id-req-ahorro-carro" xsi:type="ServingRelationship"/>
+    <relationship identifier="id-rel-19" source="id-res-herramientas-digitales" target="id-cap-competencia-tecnica" xsi:type="RealizationRelationship"/>
+    <relationship identifier="id-rel-20" source="id-res-conocimientos" target="id-cap-competencia-tecnica" xsi:type="RealizationRelationship"/>
+    <relationship identifier="id-rel-21" source="id-res-tiempo" target="id-cap-gestion-tiempo" xsi:type="RealizationRelationship"/>
+    <relationship identifier="id-rel-22" source="id-res-dinero" target="id-cap-gestion-financiera" xsi:type="RealizationRelationship"/>
+    <relationship identifier="id-rel-23" source="id-goal-crecimiento-prof" target="id-out-posicionamiento-profesional" xsi:type="RealizationRelationship"/>
+    <relationship identifier="id-rel-24" source="id-goal-estabilidad-econ" target="id-out-solvencia-financiera" xsi:type="RealizationRelationship"/>
+    <relationship identifier="id-rel-25" source="id-goal-comprar-casa" target="id-out-patrimonio-vivienda" xsi:type="RealizationRelationship"/>
+    <relationship identifier="id-rel-26" source="id-goal-comprar-carro" target="id-out-libertad-movilidad" xsi:type="RealizationRelationship"/>
+  </relationships>
+  <views>
+    <diagrams>
+      <view identifier="id-01085e2873f24f2485adf28e49829502">
+        <name xml:lang="es">Arquitectura de mi Vida</name>
+        <node identifier="id-01085e2873f24f2485adf28e49829502-dobj-val-superacion" elementRef="id-val-superacion" xsi:type="Element" x="60" y="55" w="190" h="45"/>
+        <node identifier="id-01085e2873f24f2485adf28e49829502-dobj-drv-desarrollo-profesional" elementRef="id-drv-desarrollo-profesional" xsi:type="Element" x="290" y="55" w="200" h="45"/>
+        <node identifier="id-01085e2873f24f2485adf28e49829502-dobj-drv-estabilidad-economica" elementRef="id-drv-estabilidad-economica" xsi:type="Element" x="530" y="55" w="200" h="45"/>
+        <node identifier="id-01085e2873f24f2485adf28e49829502-dobj-val-independencia" elementRef="id-val-independencia" xsi:type="Element" x="770" y="55" w="190" h="45"/>
+        <node identifier="id-01085e2873f24f2485adf28e49829502-dobj-goal-especializacion" elementRef="id-goal-especializacion" xsi:type="Element" x="120" y="165" w="260" h="55"/>
+        <node identifier="id-01085e2873f24f2485adf28e49829502-dobj-goal-crecimiento-prof" elementRef="id-goal-crecimiento-prof" xsi:type="Element" x="120" y="255" w="260" h="55"/>
+        <node identifier="id-01085e2873f24f2485adf28e49829502-dobj-goal-estabilidad-econ" elementRef="id-goal-estabilidad-econ" xsi:type="Element" x="120" y="345" w="260" h="55"/>
+        <node identifier="id-01085e2873f24f2485adf28e49829502-dobj-goal-comprar-casa" elementRef="id-goal-comprar-casa" xsi:type="Element" x="450" y="345" w="240" h="55"/>
+        <node identifier="id-01085e2873f24f2485adf28e49829502-dobj-goal-licencia" elementRef="id-goal-licencia" xsi:type="Element" x="720" y="255" w="220" h="55"/>
+        <node identifier="id-01085e2873f24f2485adf28e49829502-dobj-goal-comprar-carro" elementRef="id-goal-comprar-carro" xsi:type="Element" x="720" y="345" w="220" h="55"/>
+        <node identifier="id-01085e2873f24f2485adf28e49829502-dobj-out-posicionamiento-profesional" elementRef="id-out-posicionamiento-profesional" xsi:type="Element" x="50" y="500" w="260" h="45"/>
+        <node identifier="id-01085e2873f24f2485adf28e49829502-dobj-out-solvencia-financiera" elementRef="id-out-solvencia-financiera" xsi:type="Element" x="330" y="500" w="230" h="45"/>
+        <node identifier="id-01085e2873f24f2485adf28e49829502-dobj-out-patrimonio-vivienda" elementRef="id-out-patrimonio-vivienda" xsi:type="Element" x="580" y="500" w="200" h="45"/>
+        <node identifier="id-01085e2873f24f2485adf28e49829502-dobj-out-libertad-movilidad" elementRef="id-out-libertad-movilidad" xsi:type="Element" x="800" y="500" w="180" h="45"/>
+        <connection identifier="id-01085e2873f24f2485adf28e49829502-conn-rel-03" relationshipRef="id-rel-03" source="id-01085e2873f24f2485adf28e49829502-dobj-goal-estabilidad-econ" target="id-01085e2873f24f2485adf28e49829502-dobj-goal-comprar-casa" xsi:type="Relationship"/>
+        <connection identifier="id-01085e2873f24f2485adf28e49829502-conn-rel-24" relationshipRef="id-rel-24" source="id-01085e2873f24f2485adf28e49829502-dobj-goal-estabilidad-econ" target="id-01085e2873f24f2485adf28e49829502-dobj-out-solvencia-financiera" xsi:type="Relationship"/>
+        <connection identifier="id-01085e2873f24f2485adf28e49829502-conn-rel-25" relationshipRef="id-rel-25" source="id-01085e2873f24f2485adf28e49829502-dobj-goal-comprar-casa" target="id-01085e2873f24f2485adf28e49829502-dobj-out-patrimonio-vivienda" xsi:type="Relationship"/>
+        <connection identifier="id-01085e2873f24f2485adf28e49829502-conn-rel-23" relationshipRef="id-rel-23" source="id-01085e2873f24f2485adf28e49829502-dobj-goal-crecimiento-prof" target="id-01085e2873f24f2485adf28e49829502-dobj-out-posicionamiento-profesional" xsi:type="Relationship"/>
+        <connection identifier="id-01085e2873f24f2485adf28e49829502-conn-rel-26" relationshipRef="id-rel-26" source="id-01085e2873f24f2485adf28e49829502-dobj-goal-comprar-carro" target="id-01085e2873f24f2485adf28e49829502-dobj-out-libertad-movilidad" xsi:type="Relationship"/>
+        <connection identifier="id-01085e2873f24f2485adf28e49829502-conn-rel-01" relationshipRef="id-rel-01" source="id-01085e2873f24f2485adf28e49829502-dobj-goal-especializacion" target="id-01085e2873f24f2485adf28e49829502-dobj-goal-crecimiento-prof" xsi:type="Relationship"/>
+        <connection identifier="id-01085e2873f24f2485adf28e49829502-conn-rel-05" relationshipRef="id-rel-05" source="id-01085e2873f24f2485adf28e49829502-dobj-goal-licencia" target="id-01085e2873f24f2485adf28e49829502-dobj-goal-comprar-carro" xsi:type="Relationship"/>
+        <connection identifier="id-01085e2873f24f2485adf28e49829502-conn-rel-04" relationshipRef="id-rel-04" source="id-01085e2873f24f2485adf28e49829502-dobj-goal-estabilidad-econ" target="id-01085e2873f24f2485adf28e49829502-dobj-goal-comprar-carro" xsi:type="Relationship"/>
+        <connection identifier="id-01085e2873f24f2485adf28e49829502-conn-rel-02" relationshipRef="id-rel-02" source="id-01085e2873f24f2485adf28e49829502-dobj-goal-crecimiento-prof" target="id-01085e2873f24f2485adf28e49829502-dobj-goal-estabilidad-econ" xsi:type="Relationship"/>
+      </view>
+      <view identifier="id-view-desarrollo-profesional">
+        <name xml:lang="es">Desarrollo Profesional</name>
+        <node identifier="id-view-desarrollo-profesional-dobj-res-herramientas-digitales" elementRef="id-res-herramientas-digitales" xsi:type="Element" x="80" y="55" w="240" h="40"/>
+        <node identifier="id-view-desarrollo-profesional-dobj-res-conocimientos" elementRef="id-res-conocimientos" xsi:type="Element" x="360" y="55" w="260" h="40"/>
+        <node identifier="id-view-desarrollo-profesional-dobj-res-tiempo" elementRef="id-res-tiempo" xsi:type="Element" x="670" y="55" w="220" h="40"/>
+        <node identifier="id-view-desarrollo-profesional-dobj-cap-competencia-tecnica" elementRef="id-cap-competencia-tecnica" xsi:type="Element" x="150" y="160" w="320" h="45"/>
+        <node identifier="id-view-desarrollo-profesional-dobj-cap-gestion-tiempo" elementRef="id-cap-gestion-tiempo" xsi:type="Element" x="620" y="160" w="300" h="45"/>
+        <node identifier="id-view-desarrollo-profesional-dobj-req-aprobar-asignaturas" elementRef="id-req-aprobar-asignaturas" xsi:type="Element" x="150" y="270" w="260" h="45"/>
+        <node identifier="id-view-desarrollo-profesional-dobj-req-desarrollar-proyecto" elementRef="id-req-desarrollar-proyecto" xsi:type="Element" x="550" y="270" w="270" h="45"/>
+        <node identifier="id-view-desarrollo-profesional-dobj-goal-especializacion" elementRef="id-goal-especializacion" xsi:type="Element" x="330" y="380" w="320" h="50"/>
+        <node identifier="id-view-desarrollo-profesional-dobj-goal-crecimiento-prof" elementRef="id-goal-crecimiento-prof" xsi:type="Element" x="100" y="460" w="260" h="50"/>
+        <node identifier="id-view-desarrollo-profesional-dobj-goal-estabilidad-econ" elementRef="id-goal-estabilidad-econ" xsi:type="Element" x="580" y="460" w="260" h="50"/>
+        <node identifier="id-view-desarrollo-profesional-dobj-out-posicionamiento-profesional" elementRef="id-out-posicionamiento-profesional" xsi:type="Element" x="100" y="525" w="260" h="40"/>
+        <node identifier="id-view-desarrollo-profesional-dobj-out-solvencia-financiera" elementRef="id-out-solvencia-financiera" xsi:type="Element" x="580" y="525" w="260" h="40"/>
+        <connection identifier="id-view-desarrollo-profesional-conn-rel-13" relationshipRef="id-rel-13" source="id-view-desarrollo-profesional-dobj-cap-competencia-tecnica" target="id-view-desarrollo-profesional-dobj-req-desarrollar-proyecto" xsi:type="Relationship"/>
+        <connection identifier="id-view-desarrollo-profesional-conn-rel-06" relationshipRef="id-rel-06" source="id-view-desarrollo-profesional-dobj-req-aprobar-asignaturas" target="id-view-desarrollo-profesional-dobj-goal-especializacion" xsi:type="Relationship"/>
+        <connection identifier="id-view-desarrollo-profesional-conn-rel-19" relationshipRef="id-rel-19" source="id-view-desarrollo-profesional-dobj-res-herramientas-digitales" target="id-view-desarrollo-profesional-dobj-cap-competencia-tecnica" xsi:type="Relationship"/>
+        <connection identifier="id-view-desarrollo-profesional-conn-rel-24" relationshipRef="id-rel-24" source="id-view-desarrollo-profesional-dobj-goal-estabilidad-econ" target="id-view-desarrollo-profesional-dobj-out-solvencia-financiera" xsi:type="Relationship"/>
+        <connection identifier="id-view-desarrollo-profesional-conn-rel-07" relationshipRef="id-rel-07" source="id-view-desarrollo-profesional-dobj-req-desarrollar-proyecto" target="id-view-desarrollo-profesional-dobj-goal-especializacion" xsi:type="Relationship"/>
+        <connection identifier="id-view-desarrollo-profesional-conn-rel-23" relationshipRef="id-rel-23" source="id-view-desarrollo-profesional-dobj-goal-crecimiento-prof" target="id-view-desarrollo-profesional-dobj-out-posicionamiento-profesional" xsi:type="Relationship"/>
+        <connection identifier="id-view-desarrollo-profesional-conn-rel-21" relationshipRef="id-rel-21" source="id-view-desarrollo-profesional-dobj-res-tiempo" target="id-view-desarrollo-profesional-dobj-cap-gestion-tiempo" xsi:type="Relationship"/>
+        <connection identifier="id-view-desarrollo-profesional-conn-rel-14" relationshipRef="id-rel-14" source="id-view-desarrollo-profesional-dobj-cap-gestion-tiempo" target="id-view-desarrollo-profesional-dobj-req-aprobar-asignaturas" xsi:type="Relationship"/>
+        <connection identifier="id-view-desarrollo-profesional-conn-rel-02" relationshipRef="id-rel-02" source="id-view-desarrollo-profesional-dobj-goal-crecimiento-prof" target="id-view-desarrollo-profesional-dobj-goal-estabilidad-econ" xsi:type="Relationship"/>
+        <connection identifier="id-view-desarrollo-profesional-conn-rel-01" relationshipRef="id-rel-01" source="id-view-desarrollo-profesional-dobj-goal-especializacion" target="id-view-desarrollo-profesional-dobj-goal-crecimiento-prof" xsi:type="Relationship"/>
+        <connection identifier="id-view-desarrollo-profesional-conn-rel-12" relationshipRef="id-rel-12" source="id-view-desarrollo-profesional-dobj-cap-competencia-tecnica" target="id-view-desarrollo-profesional-dobj-req-aprobar-asignaturas" xsi:type="Relationship"/>
+        <connection identifier="id-view-desarrollo-profesional-conn-rel-20" relationshipRef="id-rel-20" source="id-view-desarrollo-profesional-dobj-res-conocimientos" target="id-view-desarrollo-profesional-dobj-cap-competencia-tecnica" xsi:type="Relationship"/>
+      </view>
+      <view identifier="id-view-patrimonio">
+        <name xml:lang="es">Patrimonio</name>
+        <node identifier="id-view-patrimonio-dobj-res-dinero" elementRef="id-res-dinero" xsi:type="Element" x="140" y="55" w="240" h="40"/>
+        <node identifier="id-view-patrimonio-dobj-cap-gestion-financiera" elementRef="id-cap-gestion-financiera" xsi:type="Element" x="140" y="125" w="240" h="45"/>
+        <node identifier="id-view-patrimonio-dobj-req-ahorro-casa" elementRef="id-req-ahorro-casa" xsi:type="Element" x="60" y="205" w="180" h="45"/>
+        <node identifier="id-view-patrimonio-dobj-req-credito-casa" elementRef="id-req-credito-casa" xsi:type="Element" x="260" y="205" w="200" h="45"/>
+        <node identifier="id-view-patrimonio-dobj-goal-comprar-casa" elementRef="id-goal-comprar-casa" xsi:type="Element" x="140" y="310" w="240" h="55"/>
+        <node identifier="id-view-patrimonio-dobj-out-patrimonio-vivienda" elementRef="id-out-patrimonio-vivienda" xsi:type="Element" x="140" y="430" w="240" h="45"/>
+        <node identifier="id-view-patrimonio-dobj-res-tiempo" elementRef="id-res-tiempo" xsi:type="Element" x="620" y="55" w="240" h="40"/>
+        <node identifier="id-view-patrimonio-dobj-cap-gestion-tiempo" elementRef="id-cap-gestion-tiempo" xsi:type="Element" x="620" y="125" w="240" h="45"/>
+        <node identifier="id-view-patrimonio-dobj-req-licencia-vigente" elementRef="id-req-licencia-vigente" xsi:type="Element" x="540" y="205" w="180" h="45"/>
+        <node identifier="id-view-patrimonio-dobj-req-ahorro-carro" elementRef="id-req-ahorro-carro" xsi:type="Element" x="740" y="205" w="190" h="45"/>
+        <node identifier="id-view-patrimonio-dobj-goal-licencia" elementRef="id-goal-licencia" xsi:type="Element" x="540" y="280" w="180" h="50"/>
+        <node identifier="id-view-patrimonio-dobj-goal-comprar-carro" elementRef="id-goal-comprar-carro" xsi:type="Element" x="620" y="365" w="240" h="55"/>
+        <node identifier="id-view-patrimonio-dobj-out-libertad-movilidad" elementRef="id-out-libertad-movilidad" xsi:type="Element" x="620" y="450" w="240" h="45"/>
+        <connection identifier="id-view-patrimonio-conn-rel-15" relationshipRef="id-rel-15" source="id-view-patrimonio-dobj-cap-gestion-tiempo" target="id-view-patrimonio-dobj-req-licencia-vigente" xsi:type="Relationship"/>
+        <connection identifier="id-view-patrimonio-conn-rel-22" relationshipRef="id-rel-22" source="id-view-patrimonio-dobj-res-dinero" target="id-view-patrimonio-dobj-cap-gestion-financiera" xsi:type="Relationship"/>
+        <connection identifier="id-view-patrimonio-conn-rel-25" relationshipRef="id-rel-25" source="id-view-patrimonio-dobj-goal-comprar-casa" target="id-view-patrimonio-dobj-out-patrimonio-vivienda" xsi:type="Relationship"/>
+        <connection identifier="id-view-patrimonio-conn-rel-21" relationshipRef="id-rel-21" source="id-view-patrimonio-dobj-res-tiempo" target="id-view-patrimonio-dobj-cap-gestion-tiempo" xsi:type="Relationship"/>
+        <connection identifier="id-view-patrimonio-conn-rel-11" relationshipRef="id-rel-11" source="id-view-patrimonio-dobj-req-credito-casa" target="id-view-patrimonio-dobj-goal-comprar-casa" xsi:type="Relationship"/>
+        <connection identifier="id-view-patrimonio-conn-rel-08" relationshipRef="id-rel-08" source="id-view-patrimonio-dobj-req-licencia-vigente" target="id-view-patrimonio-dobj-goal-licencia" xsi:type="Relationship"/>
+        <connection identifier="id-view-patrimonio-conn-rel-10" relationshipRef="id-rel-10" source="id-view-patrimonio-dobj-req-ahorro-casa" target="id-view-patrimonio-dobj-goal-comprar-casa" xsi:type="Relationship"/>
+        <connection identifier="id-view-patrimonio-conn-rel-09" relationshipRef="id-rel-09" source="id-view-patrimonio-dobj-req-ahorro-carro" target="id-view-patrimonio-dobj-goal-comprar-carro" xsi:type="Relationship"/>
+        <connection identifier="id-view-patrimonio-conn-rel-26" relationshipRef="id-rel-26" source="id-view-patrimonio-dobj-goal-comprar-carro" target="id-view-patrimonio-dobj-out-libertad-movilidad" xsi:type="Relationship"/>
+        <connection identifier="id-view-patrimonio-conn-rel-18" relationshipRef="id-rel-18" source="id-view-patrimonio-dobj-cap-gestion-financiera" target="id-view-patrimonio-dobj-req-ahorro-carro" xsi:type="Relationship"/>
+        <connection identifier="id-view-patrimonio-conn-rel-17" relationshipRef="id-rel-17" source="id-view-patrimonio-dobj-cap-gestion-financiera" target="id-view-patrimonio-dobj-req-credito-casa" xsi:type="Relationship"/>
+        <connection identifier="id-view-patrimonio-conn-rel-05" relationshipRef="id-rel-05" source="id-view-patrimonio-dobj-goal-licencia" target="id-view-patrimonio-dobj-goal-comprar-carro" xsi:type="Relationship"/>
+        <connection identifier="id-view-patrimonio-conn-rel-16" relationshipRef="id-rel-16" source="id-view-patrimonio-dobj-cap-gestion-financiera" target="id-view-patrimonio-dobj-req-ahorro-casa" xsi:type="Relationship"/>
+      </view>
+    </diagrams>
+  </views>
+</model>

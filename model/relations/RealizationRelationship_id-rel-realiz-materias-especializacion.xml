@@ -1,0 +1,6 @@
+<archimate:RealizationRelationship
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:archimate="http://www.archimatetool.com/archimate"
+    id="id-rel-realiz-materias-especializacion"
+    source="archimate:Requirement ../motivation/Requirement_id-req-aprobar-materias-pendientes.xml#id-req-aprobar-materias-pendientes"
+    target="archimate:Goal ../motivation/Goal_id-goal-terminar-especializacion.xml#id-goal-terminar-especializacion"/>

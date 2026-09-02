@@ -1,0 +1,99 @@
+<archimate:ArchimateDiagramModel
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:archimate="http://www.archimatetool.com/archimate"
+    name="Metas"
+    id="id-view-metas"
+    connectionRouterType="2">
+  <children
+      xsi:type="archimate:DiagramModelArchimateObject"
+      id="id-v2-dobj-elheim"
+      archimateElement="archimate:Stakeholder ../motivation/Stakeholder_id-sh-elheim.xml#id-sh-elheim">
+    <bounds
+        x="80"
+        y="150"
+        width="160"
+        height="70"/>
+    <sourceConnections
+        xsi:type="archimate:DiagramModelArchimateConnection"
+        id="id-v2-conn-infl-esp"
+        source="id-v2-dobj-elheim"
+        target="id-v2-dobj-goal-esp"
+        archimateRelationship="archimate:InfluenceRelationship ../relations/InfluenceRelationship_id-rel-infl-elheim-especializacion.xml#id-rel-infl-elheim-especializacion"/>
+    <sourceConnections
+        xsi:type="archimate:DiagramModelArchimateConnection"
+        id="id-v2-conn-infl-crec"
+        source="id-v2-dobj-elheim"
+        target="id-v2-dobj-goal-crec"
+        archimateRelationship="archimate:InfluenceRelationship ../relations/InfluenceRelationship_id-rel-infl-elheim-crecimiento.xml#id-rel-infl-elheim-crecimiento"/>
+  </children>
+  <children
+      xsi:type="archimate:DiagramModelArchimateObject"
+      id="id-v2-dobj-goal-esp"
+      targetConnections="id-v2-conn-infl-esp id-v2-conn-realiz-mat id-v2-conn-realiz-proy"
+      archimateElement="archimate:Goal ../motivation/Goal_id-goal-terminar-especializacion.xml#id-goal-terminar-especializacion">
+    <bounds
+        x="360"
+        y="80"
+        width="260"
+        height="60"/>
+  </children>
+  <children
+      xsi:type="archimate:DiagramModelArchimateObject"
+      id="id-v2-dobj-goal-crec"
+      targetConnections="id-v2-conn-infl-crec id-v2-conn-realiz-rol"
+      archimateElement="archimate:Goal ../motivation/Goal_id-goal-crecimiento-profesional.xml#id-goal-crecimiento-profesional">
+    <bounds
+        x="360"
+        y="240"
+        width="260"
+        height="60"/>
+  </children>
+  <children
+      xsi:type="archimate:DiagramModelArchimateObject"
+      id="id-v2-dobj-req-materias"
+      archimateElement="archimate:Requirement ../motivation/Requirement_id-req-aprobar-materias-pendientes.xml#id-req-aprobar-materias-pendientes">
+    <bounds
+        x="700"
+        y="50"
+        width="250"
+        height="55"/>
+    <sourceConnections
+        xsi:type="archimate:DiagramModelArchimateConnection"
+        id="id-v2-conn-realiz-mat"
+        source="id-v2-dobj-req-materias"
+        target="id-v2-dobj-goal-esp"
+        archimateRelationship="archimate:RealizationRelationship ../relations/RealizationRelationship_id-rel-realiz-materias-especializacion.xml#id-rel-realiz-materias-especializacion"/>
+  </children>
+  <children
+      xsi:type="archimate:DiagramModelArchimateObject"
+      id="id-v2-dobj-req-proyecto"
+      archimateElement="archimate:Requirement ../motivation/Requirement_id-req-aprobar-proyecto-grado.xml#id-req-aprobar-proyecto-grado">
+    <bounds
+        x="700"
+        y="120"
+        width="250"
+        height="55"/>
+    <sourceConnections
+        xsi:type="archimate:DiagramModelArchimateConnection"
+        id="id-v2-conn-realiz-proy"
+        source="id-v2-dobj-req-proyecto"
+        target="id-v2-dobj-goal-esp"
+        archimateRelationship="archimate:RealizationRelationship ../relations/RealizationRelationship_id-rel-realiz-proyecto-especializacion.xml#id-rel-realiz-proyecto-especializacion"/>
+  </children>
+  <children
+      xsi:type="archimate:DiagramModelArchimateObject"
+      id="id-v2-dobj-req-rol"
+      archimateElement="archimate:Requirement ../motivation/Requirement_id-req-conseguir-nuevo-rol-posicion.xml#id-req-conseguir-nuevo-rol-posicion">
+    <bounds
+        x="700"
+        y="242"
+        width="250"
+        height="55"/>
+    <sourceConnections
+        xsi:type="archimate:DiagramModelArchimateConnection"
+        id="id-v2-conn-realiz-rol"
+        source="id-v2-dobj-req-rol"
+        target="id-v2-dobj-goal-crec"
+        archimateRelationship="archimate:RealizationRelationship ../relations/RealizationRelationship_id-rel-realiz-rol-crecimiento.xml#id-rel-realiz-rol-crecimiento"/>
+  </children>
+</archimate:ArchimateDiagramModel>

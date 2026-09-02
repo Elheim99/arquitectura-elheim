@@ -1,0 +1,71 @@
+<archimate:ArchimateDiagramModel
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:archimate="http://www.archimatetool.com/archimate"
+    name="General"
+    id="id-view-general"
+    connectionRouterType="2">
+  <children
+      xsi:type="archimate:DiagramModelArchimateObject"
+      id="id-v1-dobj-elheim"
+      archimateElement="archimate:Stakeholder ../motivation/Stakeholder_id-sh-elheim.xml#id-sh-elheim">
+    <bounds
+        x="60"
+        y="140"
+        width="160"
+        height="70"/>
+    <sourceConnections
+        xsi:type="archimate:DiagramModelArchimateConnection"
+        id="id-v1-conn-assign-prof"
+        source="id-v1-dobj-elheim"
+        target="id-v1-dobj-role-prof"
+        archimateRelationship="archimate:AssignmentRelationship ../relations/AssignmentRelationship_id-rel-assign-elheim-profesional.xml#id-rel-assign-elheim-profesional"/>
+    <sourceConnections
+        xsi:type="archimate:DiagramModelArchimateConnection"
+        id="id-v1-conn-assign-posg"
+        source="id-v1-dobj-elheim"
+        target="id-v1-dobj-role-posg"
+        archimateRelationship="archimate:AssignmentRelationship ../relations/AssignmentRelationship_id-rel-assign-elheim-posgrado.xml#id-rel-assign-elheim-posgrado"/>
+  </children>
+  <children
+      xsi:type="archimate:DiagramModelArchimateObject"
+      id="id-v1-dobj-grp-prof"
+      archimateElement="archimate:Grouping ../other/Grouping_id-grp-profesional-laboral.xml#id-grp-profesional-laboral">
+    <bounds
+        x="320"
+        y="60"
+        width="300"
+        height="130"/>
+    <children
+        xsi:type="archimate:DiagramModelArchimateObject"
+        id="id-v1-dobj-role-prof"
+        targetConnections="id-v1-conn-assign-prof"
+        archimateElement="archimate:BusinessRole ../business/BusinessRole_id-role-profesional-actual.xml#id-role-profesional-actual">
+      <bounds
+          x="30"
+          y="45"
+          width="240"
+          height="55"/>
+    </children>
+  </children>
+  <children
+      xsi:type="archimate:DiagramModelArchimateObject"
+      id="id-v1-dobj-grp-acad"
+      archimateElement="archimate:Grouping ../other/Grouping_id-grp-academico-formacion.xml#id-grp-academico-formacion">
+    <bounds
+        x="320"
+        y="220"
+        width="300"
+        height="130"/>
+    <children
+        xsi:type="archimate:DiagramModelArchimateObject"
+        id="id-v1-dobj-role-posg"
+        targetConnections="id-v1-conn-assign-posg"
+        archimateElement="archimate:BusinessRole ../business/BusinessRole_id-role-estudiante-posgrado.xml#id-role-estudiante-posgrado">
+      <bounds
+          x="30"
+          y="45"
+          width="240"
+          height="55"/>
+    </children>
+  </children>
+</archimate:ArchimateDiagramModel>

@@ -1,0 +1,6 @@
+<archimate:AssignmentRelationship
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:archimate="http://www.archimatetool.com/archimate"
+    id="id-rel-assign-elheim-posgrado"
+    source="archimate:Stakeholder ../motivation/Stakeholder_id-sh-elheim.xml#id-sh-elheim"
+    target="archimate:BusinessRole ../business/BusinessRole_id-role-estudiante-posgrado.xml#id-role-estudiante-posgrado"/>
